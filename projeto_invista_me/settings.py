@@ -31,8 +31,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['https://projetoinvistame-production-4a84.up.railway.app/']
+# Quando quiser testar localmente: ALLOWED_HOSTS = ['*']
+#https://projetoinvistame-production-4a84.up.railway.app/
 
 # Application definition
 
@@ -85,12 +86,12 @@ WSGI_APPLICATION = 'projeto_invista_me.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '8ujN9jokn3LB1m3YsjPd',
-        'HOST': 'containers-us-west-193.railway.app',
-        'PORT': '6957',
+        'ENGINE': os.getenv('ENGINE'),
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        'HOST': os.getenv('HOST'),
+        'PORT': os.getenv('PORT'),
     }
 }
 

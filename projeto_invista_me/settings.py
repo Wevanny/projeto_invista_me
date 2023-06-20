@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['projetoinvistame-production-4a84.up.railway.app']
+ALLOWED_HOSTS = ['https://projetoinvistame-production-4a84.up.railway.app']
 # Quando quiser testar localmente: ALLOWED_HOSTS = ['*']
 #https://projetoinvistame-production-4a84.up.railway.app/
 
